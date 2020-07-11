@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="505.0" stylesheets="@../resource/FichaProgramador.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.miguelaquino.controller.AcercaProgramadorController">
+   <children>
+      <ImageView fitHeight="631.0" fitWidth="505.0" opacity="0.77" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/textura-fotograf-a.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="178.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/yo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="44.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoKinal.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="37.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Completo:">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="38.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edad:">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grado:">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código Técnico:">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. Carnét">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo:">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="92.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miguel Estuardo Aquino">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="104.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18 años">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="119.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quinto Informática">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="202.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IN5AV">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="147.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2014-029">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="119.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="miguelestuardo053@gmail.com">
+         <font>
+            <Font name="Times New Roman Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para regresar">
+         <font>
+            <Font name="Times New Roman Italic" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.miguelaquino.controller.MedicoController">
+   <children>
+      <ImageView fitHeight="637.0" fitWidth="1096.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="436.0" layoutY="2.0" prefHeight="74.0" prefWidth="202.0" text="Médicos">
+         <font>
+            <Font name="Times New Roman" size="57.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="89.0" text="Licencia Médica:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLicenciaMedica" editable="false" layoutX="396.0" layoutY="95.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="252.0">
+         <effect>
+            <Blend mode="BLUE" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtNombres" editable="false" layoutX="396.0" layoutY="130.0" prefHeight="26.0" prefWidth="349.0">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="396.0" layoutY="169.0" prefHeight="26.0" prefWidth="349.0">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtTurno" editable="false" layoutX="777.0" layoutY="256.0" prefHeight="26.0" prefWidth="173.0">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font></TextField>
+      <TableView fx:id="tblMedicos" fixedCellSize="0.0" layoutX="66.0" layoutY="298.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="196.0" prefWidth="942.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" editable="false" prefWidth="116.0" sortable="false" text="Código" />
+          <TableColumn fx:id="colLicenciaMedica" editable="false" prefWidth="141.0" sortable="false" text="Licencia Médica" />
+          <TableColumn fx:id="colNombres" editable="false" minWidth="0.0" prefWidth="136.0" sortable="false" text="Nombres" />
+            <TableColumn fx:id="colApellidos" editable="false" minWidth="1.0" prefWidth="135.0" sortable="false" text="Apellidos" />
+            <TableColumn fx:id="colEntrada" editable="false" minWidth="0.0" prefWidth="88.0" sortable="false" text="Entrada" />
+            <TableColumn fx:id="colSalida" editable="false" minWidth="0.0" prefWidth="85.0" sortable="false" text="Salida" />
+            <TableColumn fx:id="colTurno" editable="false" minWidth="0.0" prefWidth="115.0" sortable="false" text="Turno Máximo" />
+            <TableColumn fx:id="colSexo" editable="false" minWidth="0.0" prefWidth="125.0" sortable="false" text="Sexo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="102.0" layoutY="509.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="74.0" prefWidth="142.0" text="Nuevo">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="326.0" layoutY="509.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="74.0" prefWidth="142.0" text="Eliminar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="563.0" layoutY="509.0" mnemonicParsing="false" onAction="#editar" prefHeight="74.0" prefWidth="161.0" text="Editar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="801.0" layoutY="509.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="74.0" prefWidth="142.0" text="Reporte">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <ImageView fitHeight="149.0" fitWidth="142.0" layoutX="24.0" layoutY="25.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoMedicos.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="796.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para regresar" textAlignment="CENTER" wrappingWidth="103.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="193.0" layoutY="123.0" text="Nombres:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="193.0" layoutY="163.0" text="Apellidos:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="250.0" prefHeight="38.0" prefWidth="74.0" text="Sexo:" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="590.0" layoutY="250.0" text="Turno Máximo:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="103.0" fitWidth="104.0" layoutX="908.0" layoutY="22.0" onMouseClicked="#ventanaTelefonosMedicos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoTelefonoMedico.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="894.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para Teléfonos Medicos" textAlignment="CENTER" wrappingWidth="131.9970703125">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="103.0" fitWidth="103.0" layoutX="796.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/iconoHospital.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbSexo" layoutX="346.0" layoutY="256.0" prefHeight="26.0" prefWidth="165.0" />
+      <Label layoutX="190.0" layoutY="212.0" text="Hora de Entrada:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraEntrada" editable="false" layoutX="396.0" layoutY="218.0" prefHeight="26.0" prefWidth="165.0">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtHoraSalida" editable="false" layoutX="798.0" layoutY="218.0" prefHeight="26.0" prefWidth="165.0">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="592.0" layoutY="212.0" text="Hora de Salida:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

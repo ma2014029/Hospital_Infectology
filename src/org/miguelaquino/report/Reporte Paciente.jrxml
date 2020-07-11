@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reporte Paciente" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="62a75504-773a-45db-9a9f-c93f011fc360">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="112"/>
+	<property name="charcter_set_server" value=""/>
+	<property name="characterEncoding" value=""/>
+	<queryString>
+		<![CDATA[call sp_ListarContacto_y_Pacientes()]]>
+	</queryString>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ocupacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="148" splitType="Stretch">
+			<image>
+				<reportElement x="398" y="0" width="157" height="148" uuid="0b2c48fc-7834-401d-b2da-336bf4ec6cab"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2014029\\src\\org\\miguelaquino\\images\\prueba.PNG"]]></imageExpression>
+			</image>
+			<elementGroup/>
+			<staticText>
+				<reportElement x="0" y="0" width="398" height="45" uuid="c1a07597-7fa8-41b4-9857-62cc03dd82ab"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA["La fuerza natural dentro de cada uno de nosotros es el mayor sanador de todo"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="111" width="111" height="34" uuid="84d72b74-9c01-47a5-a94d-f0f3755bff78"/>
+				<box bottomPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Hospital Infectologia]]></text>
+			</staticText>
+			<image>
+				<reportElement x="18" y="45" width="70" height="66" uuid="6452f5d9-badd-4a3a-a97f-889b5c0259ed"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2014029\\src\\org\\miguelaquino\\images\\iconoHospital.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement x="128" y="25" width="270" height="55" uuid="d914747e-1727-4b64-9593-a01d7cd277ad"/>
+				<box bottomPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="34" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Pacientes]]></text>
+			</staticText>
+			<elementGroup/>
+			<image>
+				<reportElement x="398" y="0" width="76" height="80" uuid="84dbdcee-eb84-4788-9766-e39a6c51cc8e"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2014029\\src\\org\\miguelaquino\\images\\logoPacientes.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="2" width="555" height="1" uuid="841c2a9d-2cac-42d2-b3d8-15fd3089b031"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double" lineColor="#00CCFF"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="40" width="555" height="1" uuid="a79b29c6-490b-4b8c-91ff-9d8092403ba7"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double" lineColor="#00CCFF"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="3" width="87" height="38" uuid="36a8fa2d-ad51-4419-b6bd-61aa628c257a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Pacientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="0" width="75" height="38" uuid="c987cc46-2afc-428c-aa70-ecdf9a51f78f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="3" width="96" height="38" uuid="39e68cb6-c1a9-4ce2-a47e-a2548ee1c6ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="2" width="68" height="38" uuid="12312f71-19c4-446b-9a0d-f90b6da0a90b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="2" width="85" height="38" uuid="41f0cbb6-1f2f-43be-beef-59a36c54a34e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ocupación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="2" width="124" height="38" uuid="f171cc31-9aa7-4915-8b22-d0153efb2187"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono Contacto Urgencia]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="37" width="555" height="1" uuid="9a4b5536-b0e9-457a-ab95-6db23f00252d"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double" lineColor="#00CCFF"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="1" y="0" width="87" height="37" uuid="b80f3b73-1f90-474c-9859-0e261220347b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="72" height="37" uuid="de570a62-c695-4f15-b7b2-fa01d52baecb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="0" width="79" height="37" uuid="e4409c98-3c14-4b83-bd2a-67f7315f3931"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ocupacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="0" width="75" height="37" uuid="360a5763-4e58-45f9-af9a-5a71a1e73084"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="0" width="63" height="37" uuid="c1be9a8a-2533-4aa7-8a45-268eaff17579"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="0" width="100" height="37" uuid="72e00a43-2bc9-4851-8815-ede8a9727b46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroContacto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="183">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="206" y="90" width="192" height="28" uuid="966cab01-59f9-45a7-ad50-5a3cea18c0f0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="132" width="556" height="51" uuid="b4760128-3612-4ed3-99c0-1a1d6b2f8d7a"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2014029\\src\\org\\miguelaquino\\images\\pruba inferior.PNG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="161" y="132" width="416" height="51" uuid="c73657e1-1d1b-412a-9a64-41a18915e8ca"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\HospitalInfectologia2014029\\src\\org\\miguelaquino\\images\\pruba inferior.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

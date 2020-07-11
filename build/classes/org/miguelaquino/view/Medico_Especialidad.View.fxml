@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.miguelaquino.controller.Medico_EspecialidadController">
+   <children>
+      <ImageView fitHeight="627.0" fitWidth="1021.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="299.0" layoutY="9.0" prefHeight="74.0" prefWidth="356.0" text="Mèdicos Especialidades">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="230.0" layoutY="259.0" prefHeight="203.0" prefWidth="559.0">
+        <columns>
+          <TableColumn fx:id="colCodigos" prefWidth="108.0" sortable="false" text="Códigos" />
+          <TableColumn fx:id="colCodigoMedico" minWidth="0.0" prefWidth="148.0" text="Codigo Medico" />
+            <TableColumn fx:id="colCodigoEspecialidad" minWidth="0.0" prefWidth="148.0" text="Codigo Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" minWidth="0.0" prefWidth="148.0" text="Codigo Horario" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="145.0" layoutY="494.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="154.0" text="Nuevo">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="344.0" layoutY="494.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="147.0" text="Eliminar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="539.0" layoutY="494.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="154.0" text="Editar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="736.0" layoutY="494.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="138.0" text="Reporte">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <ImageView fitHeight="159.0" fitWidth="180.0" layoutX="37.0" layoutY="46.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logEspecialidadMedicos.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="598.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para regresar" textAlignment="CENTER" wrappingWidth="101.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="102.0" fitWidth="101.0" layoutX="598.0" layoutY="70.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/iconoHospital.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbMedico" layoutX="299.0" layoutY="93.0" prefHeight="33.0" prefWidth="205.0" promptText="Código Mèdico" />
+      <ComboBox fx:id="cmbEspecialidad" layoutX="299.0" layoutY="145.0" prefHeight="33.0" prefWidth="205.0" promptText="Código Especialidad" />
+      <ComboBox fx:id="cmbHorario" layoutX="299.0" layoutY="202.0" prefHeight="33.0" prefWidth="205.0" promptText="Código Horario" />
+      <ImageView fitHeight="102.0" fitWidth="101.0" layoutX="705.0" layoutY="70.0" onMouseClicked="#ventanaMedicos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoMedicos.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="705.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para ir a Médicos" textAlignment="CENTER" wrappingWidth="101.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="102.0" fitWidth="101.0" layoutX="806.0" layoutY="70.0" onMouseClicked="#ventanaEspecialidad" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoEspecialidades.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="806.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para ir a Especialidades" textAlignment="CENTER" wrappingWidth="101.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="102.0" fitWidth="101.0" layoutX="907.0" layoutY="70.0" onMouseClicked="#ventanaHorarios" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoHorariosMedicos.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="907.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para ir a Horarios" textAlignment="CENTER" wrappingWidth="101.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

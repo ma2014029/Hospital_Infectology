@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.miguelaquino.controller.EspecialidadesMedicosController">
+   <children>
+      <ImageView fitHeight="658.0" fitWidth="1027.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="306.0" layoutY="55.0" prefHeight="74.0" prefWidth="349.0" text="Especialidades">
+         <font>
+            <Font name="Times New Roman" size="57.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" editable="false" layoutX="360.0" layoutY="155.0" prefHeight="26.0" prefWidth="335.0">
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font></TextField>
+      <TableView fx:id="tblEspecialidades" layoutX="274.0" layoutY="206.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="254.0" prefWidth="382.0">
+        <columns>
+          <TableColumn fx:id="colCodigos" prefWidth="92.0" sortable="false" text="Códigos" />
+          <TableColumn fx:id="colNombres" minWidth="0.0" prefWidth="283.0" text="Nombres" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="91.0" layoutY="483.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="74.0" prefWidth="158.0" text="Nuevo">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="301.0" layoutY="483.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="74.0" prefWidth="147.0" text="Eliminar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="497.0" layoutY="483.0" mnemonicParsing="false" onAction="#editar" prefHeight="74.0" prefWidth="158.0" text="Editar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="693.0" layoutY="483.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="138.0" text="Reporte">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <ImageView fitHeight="193.0" fitWidth="172.0" layoutX="44.0" layoutY="43.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoEspecialidades.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="769.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para regresar">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="236.0" layoutY="149.0" text="Nombre:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="135.0" fitWidth="138.0" layoutX="764.0" layoutY="24.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/iconoHospital.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

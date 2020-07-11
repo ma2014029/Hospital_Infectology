@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.miguelaquino.controller.CargosController">
+   <children>
+      <ImageView fitHeight="662.0" fitWidth="1027.0" layoutX="-1.0" layoutY="-7.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="383.0" layoutY="53.0" prefHeight="74.0" prefWidth="195.0" text="Cargos">
+         <font>
+            <Font name="Times New Roman" size="64.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" editable="false" layoutX="352.0" layoutY="170.0" prefHeight="26.0" prefWidth="335.0">
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font></TextField>
+      <TableView fx:id="tblCargo" layoutX="289.0" layoutY="244.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="215.0" prefWidth="347.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="87.0" sortable="false" text="Códigos" />
+          <TableColumn fx:id="colNombre" minWidth="0.0" prefWidth="251.0" text="Nombres" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="116.0" layoutY="499.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="74.0" prefWidth="155.0" text="Nuevo">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="315.0" layoutY="499.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="74.0" prefWidth="147.0" text="Eliminar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="513.0" layoutY="499.0" mnemonicParsing="false" onAction="#editar" prefHeight="74.0" prefWidth="155.0" text="Editar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="707.0" layoutY="499.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="138.0" text="Reporte">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <ImageView fitHeight="166.0" fitWidth="165.0" layoutX="32.0" layoutY="21.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoCargos.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="751.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para regresar">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="238.0" layoutY="164.0" text="Nombre:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="138.0" fitWidth="138.0" layoutX="744.0" layoutY="21.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/iconoHospital.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

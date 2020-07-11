@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.miguelaquino.controller.ContactoUrgenciaController">
+   <children>
+      <ImageView fitHeight="618.0" fitWidth="1051.0" layoutX="-8.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="349.0" layoutY="32.0" prefHeight="74.0" prefWidth="444.0" text="Contactos de Emergencia">
+         <font>
+            <Font name="Times New Roman" size="41.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblContacto" layoutX="87.0" layoutY="295.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="168.0" prefWidth="851.0">
+        <columns>
+            <TableColumn fx:id="colCodigos" prefWidth="72.0" sortable="false" text="Codigos" />
+          <TableColumn fx:id="colNombres" prefWidth="220.0" sortable="false" text="Nombres" />
+          <TableColumn fx:id="colApellidos" minWidth="0.0" prefWidth="225.0" text="Apellidos" />
+            <TableColumn fx:id="colTelefonos" minWidth="0.0" prefWidth="190.0" text="Telefonos" />
+            <TableColumn fx:id="colCodigoPaciente" minWidth="0.0" prefWidth="143.0" text="codigo Paciente" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="116.0" layoutY="483.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="74.0" prefWidth="147.0" text="Nuevo">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="349.0" layoutY="483.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="74.0" prefWidth="147.0" text="Eliminar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="563.0" layoutY="483.0" mnemonicParsing="false" onAction="#editar" prefHeight="74.0" prefWidth="147.0" text="Editar">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="781.0" layoutY="483.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="138.0" text="Reporte">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <effect>
+            <SepiaTone level="0.22" />
+         </effect></Button>
+      <ImageView fitHeight="142.0" fitWidth="147.0" layoutX="38.0" layoutY="35.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoContactoEmergencia.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="857.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presiona para regresar a Pacientes" textAlignment="CENTER" wrappingWidth="124.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="253.0" layoutY="120.0" text=" Paciente:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="253.0" layoutY="163.0" text="Nombres:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="445.0" layoutY="172.0" prefHeight="26.0" prefWidth="382.0">
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="445.0" layoutY="210.0" prefHeight="26.0" prefWidth="382.0">
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="253.0" layoutY="201.0" text="Apellidos:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefono" editable="false" layoutX="445.0" layoutY="248.0" prefHeight="26.0" prefWidth="307.0">
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="253.0" layoutY="239.0" text="No. Teléfono:" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoPaciente" layoutX="445.0" layoutY="130.0" prefHeight="25.0" prefWidth="307.0" />
+      <ImageView fitHeight="135.0" fitWidth="138.0" layoutX="852.0" layoutY="25.0" onMouseClicked="#ventanaPacientes" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoPacientes.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
